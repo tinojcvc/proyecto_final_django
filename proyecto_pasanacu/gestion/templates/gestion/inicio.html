@@ -1,0 +1,62 @@
+{% extends "silva/base.html" %}
+
+{% block content %}
+<div class="welcome-container">
+    <h2>Bienvenidos a la aplicación <span class="highlight">"Pasanacu"</span></h2>
+    <p class="description">Elige una de las siguientes opciones:</p>
+
+    <ul class="option-list">
+        <li><a href="{% url 'listar_ciclos' %}" class="option-link">📌 Ver los ciclos disponibles</a></li>
+        <li><a href="#" class="option-link">💰 Ver los aportes</a></li>
+        <li><a href="#" class="option-link">👥 Ver usuarios</a></li>
+    </ul>
+</div>
+
+<style>
+    .welcome-container {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 600px;
+        margin: 20px auto;
+    }
+
+    .highlight {
+        color: #0056b3;
+        font-weight: bold;
+    }
+
+    .description {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .option-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .option-list li {
+        margin: 15px 0;
+    }
+
+    .option-link {
+        display: block;
+        background: #0056b3;
+        color: white;
+        text-decoration: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    .option-link:hover {
+        background: #004494;
+    }
+</style>
+
+{% endblock %}
